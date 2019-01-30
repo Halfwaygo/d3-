@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>neo4jd3.js</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/neo4jd3.min.css">
+        <style>
+            body,
+            html,
+            .neo4jd3 {
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="neo4jd3"></div>
+        <!-- <a href="https://github.com/eisman/neo4jd3"><img style="cursor: pointer; position: absolute; top: 0; right: 0; border: 0;" src="img/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" data-canonical-src="img/forkme_right_gray_6d6d6d.png"></a> -->
+
+        <!-- Scripts -->
+        <script src="js/d3.min.js"></script>
+        <script src="js/neo4jd3.js?v=0.0.1"></script>
+        <script type="text/javascript">
+            window.onload = function() {
+                var demoJson =  {
+                        "id": 575,
+                        "name": "5c484739ce57d11b2562fc57",
+                        "symbol": "image://https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2711545709,766559950&fm=26&gp=0.jpg",
+                        "symbolSize": [
+                            60,
+                            60
+                        ],
+                        "children": [
+                            {
+                                "id": 519,
+                                "name": "5c484739ce57d11b2562fc58",
+                                "intimacy": "1",
+                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                "symbolSize": [
+                                    60,
+                                    60
+                                ],
+                                "children": [
+                                    {
+                                        "id": 584,
+                                        "name": "5c405900a97ba663a029e73f",
+                                        "intimacy": "3",
+                                        "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                        "symbolSize": [
+                                            60,
+                                            60
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 433,
+                                                "name": "5c405900a97ba663a029e743",
+                                                "intimacy": "3",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 441,
+                                                "name": "5c405900a97ba663a029e741",
+                                                "intimacy": "3",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 136,
+                                                "name": "5c405904a97ba663a029e75a",
+                                                "intimacy": "3",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": 501,
+                                        "name": "5c402e82a97ba613960acf8d",
+                                        "intimacy": "6",
+                                        "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                        "symbolSize": [
+                                            60,
+                                            60
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 370,
+                                                "name": "5c402906a97ba611d75481c5",
+                                                "intimacy": "13",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 470,
+                                                "name": "5c40298ea97ba613960ac445",
+                                                "intimacy": "14",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 544,
+                                                "name": "5c402939a97ba613960ac335",
+                                                "intimacy": "12",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": 555,
+                                        "name": "5c3761ea4f8b57142130ac4f",
+                                        "intimacy": "3",
+                                        "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                        "symbolSize": [
+                                            60,
+                                            60
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 460,
+                                                "name": "5c3f3728a97ba62d7020f284",
+                                                "intimacy": "6",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 577,
+                                                "name": "5c3741754f8b570014751411",
+                                                "intimacy": "8",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 493,
+                                                "name": "5c3761e64f8b57142130ac45",
+                                                "intimacy": "5",
+                                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                                "symbolSize": [
+                                                    60,
+                                                    60
+                                                ],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 576,
+                                "name": "5c484731ce57d11b2562fc52",
+                                "intimacy": "1",
+                                "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                "symbolSize": [
+                                    60,
+                                    60
+                                ],
+                                "children": [
+                                    {
+                                        "id": 415,
+                                        "name": "5c484735ce57d11b2562fc55",
+                                        "intimacy": "1",
+                                        "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                        "symbolSize": [
+                                            60,
+                                            60
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": 492,
+                                        "name": "5c48472cce57d11b2562fc51",
+                                        "intimacy": "1",
+                                        "symbol": "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548844855009&di=26dcaa3f822b702593d1847979b7c365&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F29%2F20150329115308_sZNYQ.jpeg",
+                                        "symbolSize": [
+                                            60,
+                                            60
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+               }
+              getData(demoJson)
+            }
+            // 以上是初始化数据
+            let images = {}
+            var demoJson = {
+                "results": [{
+                    "data": [{
+                        "graph": {
+                            "nodes": [
+                            ],
+                            "relationships": [
+                            ]
+                        }
+                    }]
+                }],
+                "errors": []
+            }
+            function changeData(node) {
+                images[node.name] = node.symbol.split('image://')[1]
+                demoJson.results[0]['data'][0]['graph']['nodes'].push({
+                    'id': node.id,
+                    'labels': [node.name],
+                    "properties": {}
+                })
+               
+                if(node.hasOwnProperty('children')) {
+                    node.children.forEach(item => {
+                        demoJson.results[0]['data'][0]['graph']['relationships'].push({
+                            id: demoJson.results[0]['data'][0]['graph']['relationships'].length + 1,
+                            type: item.intimacy,
+                            startNode: node.id,
+                            endNode: item.id
+                         })
+                    })
+                }
+                if (node.hasOwnProperty('children')) {
+                    node.children.forEach(function(item, index) {
+                        changeData(item);
+                    });
+                }
+            }
+            function getData(data) {
+                changeData(data)
+                init()
+            }
+            function init() {
+                var neo4jd3 = new Neo4jd3('#neo4jd3', {
+                    highlight: [
+                        {
+                            class: 'Project',
+                            property: 'name',
+                            value: 'neo4jd3'
+                        }
+                    ],
+                    icons: {
+                    },
+                    images,
+                    minCollision: 50,
+                    infoPanel: false,
+                    neo4jData: demoJson,
+                    nodeRadius: 34,
+                    onNodeDragEnd: function(node) {
+                        console.log(node)
+                    },
+                    onNodeDoubleClick: function(node) {
+                        console.log(node)
+                    },
+                    onRelationshipDoubleClick: function(relationship) {
+                        console.log('double click on relationship: ' + JSON.stringify(relationship));
+                    },
+                    zoomFit: true
+                });
+            }
+
+         
+        </script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','','ga');
+
+          ga('create', 'UA-430863-29', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
